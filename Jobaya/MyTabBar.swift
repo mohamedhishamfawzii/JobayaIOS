@@ -10,8 +10,10 @@ import UIKit
 
 class MyTabBar: UITabBarController {
 
+      var email:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(email)
 
         // Do any additional setup after loading the view.
     }

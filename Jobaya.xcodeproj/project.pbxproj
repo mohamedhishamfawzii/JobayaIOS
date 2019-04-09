@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772685B321D67F7E0078E7F7 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772685B221D67F7E0078E7F7 /* MyTabBar.swift */; };
+		772685B521D6AA660078E7F7 /* JobDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772685B421D6AA660078E7F7 /* JobDetails.swift */; };
+		7764DE4D222B04C60000200D /* registeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764DE4C222B04C60000200D /* registeration.swift */; };
 		77970C4121C1761A000F7449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77970C4021C1761A000F7449 /* AppDelegate.swift */; };
 		77970C4321C1761A000F7449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77970C4221C1761A000F7449 /* ViewController.swift */; };
 		77970C4621C1761A000F7449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77970C4421C1761A000F7449 /* Main.storyboard */; };
 		77970C4921C1761A000F7449 /* Jobaya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77970C4721C1761A000F7449 /* Jobaya.xcdatamodeld */; };
 		77970C4B21C1761D000F7449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77970C4A21C1761D000F7449 /* Assets.xcassets */; };
 		77970C4E21C1761D000F7449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77970C4C21C1761D000F7449 /* LaunchScreen.storyboard */; };
+		77970C6021C454DC000F7449 /* jobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77970C5F21C454DC000F7449 /* jobsViewController.swift */; };
+		96BF650752614AB6F6177388 /* Pods_Jobaya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7291F3D0A4EAA848C35A78EF /* Pods_Jobaya.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50B2FBE4F28C74105C91E433 /* Pods-Jobaya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobaya.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya.debug.xcconfig"; sourceTree = "<group>"; };
+		7291F3D0A4EAA848C35A78EF /* Pods_Jobaya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobaya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		772685B221D67F7E0078E7F7 /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		772685B421D6AA660078E7F7 /* JobDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetails.swift; sourceTree = "<group>"; };
+		7764DE4C222B04C60000200D /* registeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registeration.swift; sourceTree = "<group>"; };
 		77970C3D21C1761A000F7449 /* Jobaya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobaya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77970C4021C1761A000F7449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77970C4221C1761A000F7449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +34,8 @@
 		77970C4A21C1761D000F7449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77970C4D21C1761D000F7449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77970C4F21C1761D000F7449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77970C5F21C454DC000F7449 /* jobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobsViewController.swift; sourceTree = "<group>"; };
+		B752D3C02070CE8C0AE88AE6 /* Pods-Jobaya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobaya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BF650752614AB6F6177388 /* Pods_Jobaya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1196523D7173A2DD992479C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7291F3D0A4EAA848C35A78EF /* Pods_Jobaya.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25F5B63122E1E83278FCB2FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50B2FBE4F28C74105C91E433 /* Pods-Jobaya.debug.xcconfig */,
+				B752D3C02070CE8C0AE88AE6 /* Pods-Jobaya.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77970C3421C1761A000F7449 = {
 			isa = PBXGroup;
 			children = (
 				77970C3F21C1761A000F7449 /* Jobaya */,
 				77970C3E21C1761A000F7449 /* Products */,
+				25F5B63122E1E83278FCB2FF /* Pods */,
+				1196523D7173A2DD992479C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +88,12 @@
 		77970C3F21C1761A000F7449 /* Jobaya */ = {
 			isa = PBXGroup;
 			children = (
+				772685B221D67F7E0078E7F7 /* MyTabBar.swift */,
 				77970C4021C1761A000F7449 /* AppDelegate.swift */,
+				77970C5F21C454DC000F7449 /* jobsViewController.swift */,
 				77970C4221C1761A000F7449 /* ViewController.swift */,
+				772685B421D6AA660078E7F7 /* JobDetails.swift */,
+				7764DE4C222B04C60000200D /* registeration.swift */,
 				77970C4421C1761A000F7449 /* Main.storyboard */,
 				77970C4A21C1761D000F7449 /* Assets.xcassets */,
 				77970C4C21C1761D000F7449 /* LaunchScreen.storyboard */,
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77970C5221C1761D000F7449 /* Build configuration list for PBXNativeTarget "Jobaya" */;
 			buildPhases = (
+				B3E97E8E2FC38A7C6637AC73 /* [CP] Check Pods Manifest.lock */,
 				77970C3921C1761A000F7449 /* Sources */,
 				77970C3A21C1761A000F7449 /* Frameworks */,
 				77970C3B21C1761A000F7449 /* Resources */,
+				7E36750513DBB21F2BD52463 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +171,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E36750513DBB21F2BD52463 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3E97E8E2FC38A7C6637AC73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jobaya-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77970C3921C1761A000F7449 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77970C6021C454DC000F7449 /* jobsViewController.swift in Sources */,
 				77970C4321C1761A000F7449 /* ViewController.swift in Sources */,
+				772685B521D6AA660078E7F7 /* JobDetails.swift in Sources */,
 				77970C4121C1761A000F7449 /* AppDelegate.swift in Sources */,
+				772685B321D67F7E0078E7F7 /* MyTabBar.swift in Sources */,
+				7764DE4D222B04C60000200D /* registeration.swift in Sources */,
 				77970C4921C1761A000F7449 /* Jobaya.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,9 +367,12 @@
 		};
 		77970C5321C1761D000F7449 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50B2FBE4F28C74105C91E433 /* Pods-Jobaya.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJ984G2TD6;
 				INFOPLIST_FILE = Jobaya/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hisham.Jobaya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,9 +388,12 @@
 		};
 		77970C5421C1761D000F7449 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B752D3C02070CE8C0AE88AE6 /* Pods-Jobaya.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NJ984G2TD6;
 				INFOPLIST_FILE = Jobaya/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hisham.Jobaya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
