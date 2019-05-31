@@ -12,6 +12,8 @@ import Alamofire
 import SwiftyJSON
 class RegViewController: UIViewController {
     
+    @IBOutlet weak var signup: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var name: UITextField!
@@ -42,20 +44,24 @@ class RegViewController: UIViewController {
         let passwords = password.text
      
        
-        let json = ["job":usernames!,"email":emails!,"password":passwords!,"gender":gender,"age":ages!,"name":names! ]
       
-        var request = URLRequest(url: URL(string: "https://reqres.in/api/users")!)
+        var request = URLRequest(url: URL(string: "https://jobayaback.herokuapp.com/register")!)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 120 // 120 secs
-       
-        print (json)
-        request.httpBody = try! JSONSerialization.data(withJSONObject: json, options: [])
+        let values =  ["username":usernames!,"email":emails!,"password":passwords!,"gender":gender,"age":ages!,"name":names! ]
+        print (values)
+        request.httpBody = try! JSONSerialization.data(withJSONObject: values, options: [])
         Alamofire.request(request as URLRequestConvertible).responseString {
             response in
-            // do whatever you want here
-           
-            print(response) }
+            let alert = UIAlertController(title: "Success", message: "You have created your account , go get hired", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            print(response)
+        }
+      
         
         
      }
@@ -64,6 +70,8 @@ class RegViewController: UIViewController {
 
     override func viewDidLoad() {
                 super.viewDidLoad()
+        signup.layer.cornerRadius=5
+        backButton.layer.cornerRadius=5
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKey))
         view.addGestureRecognizer(tap)
     }

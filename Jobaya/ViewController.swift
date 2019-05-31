@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var register: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
 
@@ -38,7 +39,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             }else{
                 
                 
-                let alert = UIAlertController(title: "Can't login", message: "Wrong email or password , please try again", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Can't login", message: "Wrong email or password , please try again", preferredStyle: .actionSheet)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                     NSLog("The \"OK\" alert occured.")
                 }))
@@ -54,6 +55,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius=5
+        register.layer.cornerRadius=5
         loginButton.setTitleColor(UIColor(red:  0/255, green: 122/255, blue: 255/255, alpha:1.0), for: .highlighted)
         password.delegate=self
         email.delegate=self

@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
+import Alamofire
+import SwiftyJSON
 
 class JobDetails: UIViewController {
   
@@ -38,6 +42,52 @@ class JobDetails: UIViewController {
     @IBAction func apply(_ sender: Any) {
         print (UserDefaults.standard.string(forKey: "email")! )
                 print(job["_id"] ?? "notfound")
+        
+        var request = URLRequest(url: URL(string: "https://jobayaback.herokuapp.com/apply")!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 120 // 120 secs
+        let values =  ["email":UserDefaults.standard.string(forKey: "email")!,"job_ID":job["_id"]]
+        print (values)
+        request.httpBody = try! JSONSerialization.data(withJSONObject: values, options: [])
+        Alamofire.request(request as URLRequestConvertible).responseString {
+            response in
+            // do whatever you want here
+            let json = JSON(response.data!)
+            print(json["found"])
+            if(!(json["found"].boolValue)){
+                
+                var request = URLRequest(url: URL(string: "https://jobayaback.herokuapp.com/applications")!)
+                request.httpMethod = "POST"
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                request.timeoutInterval = 120 // 120 secs
+                let values =  ["email":UserDefaults.standard.string(forKey: "email")!,"job_ID":self.job["_id"]]
+                print (values)
+                request.httpBody = try! JSONSerialization.data(withJSONObject: values, options: [])
+                Alamofire.request(request as URLRequestConvertible).responseString {
+                    response in
+                    print(response)
+                    let alert = UIAlertController(title: "Success", message: "You have applied to this Job successfuly , wait for the employer to contact you", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                        NSLog("The \"OK\" alert occured.")
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+         
+                    
+                    
+                }
+                
+               
+            }else{
+                
+                
+                let alert = UIAlertController(title: "Can't apply", message: "you have already applied to this job", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
         
         
     }
