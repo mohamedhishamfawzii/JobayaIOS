@@ -26,6 +26,7 @@ class JobDetails: UIViewController {
     @IBOutlet weak var header: UILabel!
     var job :NSDictionary = [:]
     override func viewDidLoad() {
+         
         super.viewDidLoad()
         self.header.text = (job["title"] as? String?)!
           self.des.text = (job["description"] as? String?)!
@@ -61,7 +62,7 @@ class JobDetails: UIViewController {
                 request.httpMethod = "POST"
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.timeoutInterval = 120 // 120 secs
-                let values =  ["email":UserDefaults.standard.string(forKey: "email")!,"job_ID":self.job["_id"]]
+                let values =  ["email":UserDefaults.standard.string(forKey: "email")!,"job_ID":self.job["_id"],"Job":self.job]
                 print (values)
                 request.httpBody = try! JSONSerialization.data(withJSONObject: values, options: [])
                 Alamofire.request(request as URLRequestConvertible).responseString {

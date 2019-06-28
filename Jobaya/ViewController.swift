@@ -35,7 +35,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
             print(json["found"])
             if(json["found"].boolValue){
                 self.performSegue(withIdentifier: "logged", sender: self)
-                UserDefaults.standard.set(self.email.text!, forKey: "email")
+                let defaults = UserDefaults.standard
+                defaults.set(self.email.text, forKey: "email")
+              defaults.set(true,forKey: "logged")
             }else{
                 
                 
@@ -50,11 +52,15 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func loginPressed(_ sender: Any) {
         print("entered")
-
+       
         login()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+         let defaults = UserDefaults.standard
+        
+        print(defaults.bool(forKey:"logged"))
+       
         loginButton.layer.cornerRadius=5
         register.layer.cornerRadius=5
         loginButton.setTitleColor(UIColor(red:  0/255, green: 122/255, blue: 255/255, alpha:1.0), for: .highlighted)
@@ -62,7 +68,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
         email.delegate=self
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKey))
         view.addGestureRecognizer(tap)
-        
         
     
         // Do any additional setup after loading the view, typically from a nib.

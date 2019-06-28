@@ -17,6 +17,8 @@
 		77970C4B21C1761D000F7449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77970C4A21C1761D000F7449 /* Assets.xcassets */; };
 		77970C4E21C1761D000F7449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77970C4C21C1761D000F7449 /* LaunchScreen.storyboard */; };
 		77970C6021C454DC000F7449 /* jobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77970C5F21C454DC000F7449 /* jobsViewController.swift */; };
+		77A3727E22C40A6D00B68531 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3727D22C40A6D00B68531 /* ResumeViewController.swift */; };
+		77E7785722C65A13005C17B4 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7785622C65A13005C17B4 /* MatchesViewController.swift */; };
 		96BF650752614AB6F6177388 /* Pods_Jobaya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7291F3D0A4EAA848C35A78EF /* Pods_Jobaya.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		77970C4D21C1761D000F7449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77970C4F21C1761D000F7449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77970C5F21C454DC000F7449 /* jobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobsViewController.swift; sourceTree = "<group>"; };
+		77A3727D22C40A6D00B68531 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		77E7785622C65A13005C17B4 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		B752D3C02070CE8C0AE88AE6 /* Pods-Jobaya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobaya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +97,9 @@
 				77970C5F21C454DC000F7449 /* jobsViewController.swift */,
 				77970C4221C1761A000F7449 /* ViewController.swift */,
 				772685B421D6AA660078E7F7 /* JobDetails.swift */,
+				77E7785622C65A13005C17B4 /* MatchesViewController.swift */,
 				7764DE4C222B04C60000200D /* registeration.swift */,
+				77A3727D22C40A6D00B68531 /* ResumeViewController.swift */,
 				77970C4421C1761A000F7449 /* Main.storyboard */,
 				77970C4A21C1761D000F7449 /* Assets.xcassets */,
 				77970C4C21C1761D000F7449 /* LaunchScreen.storyboard */,
@@ -181,12 +187,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Jobaya/Pods-Jobaya-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,8 +230,10 @@
 				77970C6021C454DC000F7449 /* jobsViewController.swift in Sources */,
 				77970C4321C1761A000F7449 /* ViewController.swift in Sources */,
 				772685B521D6AA660078E7F7 /* JobDetails.swift in Sources */,
+				77E7785722C65A13005C17B4 /* MatchesViewController.swift in Sources */,
 				77970C4121C1761A000F7449 /* AppDelegate.swift in Sources */,
 				772685B321D67F7E0078E7F7 /* MyTabBar.swift in Sources */,
+				77A3727E22C40A6D00B68531 /* ResumeViewController.swift in Sources */,
 				7764DE4D222B04C60000200D /* registeration.swift in Sources */,
 				77970C4921C1761A000F7449 /* Jobaya.xcdatamodeld in Sources */,
 			);

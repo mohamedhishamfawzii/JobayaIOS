@@ -9,5 +9,6 @@ target 'Jobaya' do
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SVProgressHUD'
+pod "SearchTextField"
 end
 

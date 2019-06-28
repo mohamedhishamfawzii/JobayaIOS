@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+         let defaults = UserDefaults.standard
+        if (defaults.bool(forKey:"logged")){
+            let sb = UIStoryboard(name:"Main", bundle: Bundle.main)
+            let vc = sb.instantiateViewController(withIdentifier: "tab")
+            vc.modalTransitionStyle = .crossDissolve
+            window!.rootViewController = vc
+            window!.makeKeyAndVisible()
+        }
         // Override point for customization after application launch.
         return true
     }
