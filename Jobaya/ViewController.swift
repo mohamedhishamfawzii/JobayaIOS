@@ -52,7 +52,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func loginPressed(_ sender: Any) {
         print("entered")
-       
         login()
     }
     override func viewDidLoad() {
@@ -73,8 +72,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     @objc func dismissKey(){
-        
-        
         view.endEditing(true)
     }
     
